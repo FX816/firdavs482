@@ -1,0 +1,142 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: #fff9f5;
+    color: #333;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.hero {
+    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+.btn {
+    background: #d2691e;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin: 5px;
+    display: inline-block;
+}
+.btn:hover {
+    background: #a0522d;
+}
+.btn.secondary {
+    background-color: #444;
+}
+.menu-section h2,
+.location h2,
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+.menu-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.menu-item h3 {
+    margin: 0 0 10px;
+}
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: none;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contact input, .contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.contact button {
+    background: #d2691e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.contact button:hover {
+    background: #a0522d;
+}
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+footer {
+    background-color: #2f2f2f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+footer a {
+    color: #ffdd99;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Анимации при прокрутке */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 10px 20px;
+    }
+}

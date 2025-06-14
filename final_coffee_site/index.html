@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня Aroma</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Кофейня Aroma</h1>
+            <p>Свежий кофе. Уютная атмосфера. Каждый день.</p>
+            <a href="#menu" class="btn">Посмотреть меню</a>
+            <a href="#contact" class="btn secondary">Забронировать столик</a>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-section container animate">
+        <h2>Наше меню</h2>
+        <div class="menu-grid">
+            <div class="menu-item"><h3>Американо</h3><p>15,000 сум</p></div>
+            <div class="menu-item"><h3>Капучино</h3><p>18,000 сум</p></div>
+            <div class="menu-item"><h3>Латте</h3><p>20,000 сум</p></div>
+            <div class="menu-item"><h3>Круассан</h3><p>12,000 сум</p></div>
+        </div>
+    </section>
+
+    <section class="location container animate">
+        <h2>Где мы находимся</h2>
+        <p>Улица Навои, Ташкент</p>
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Tashkent&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="contact container animate">
+        <h2>Связаться с нами</h2>
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Номер телефона" required>
+            <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <a class="floating-btn" href="https://t.me/yourtelegram" target="_blank">💬 Telegram</a>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Кофейня Aroma</p>
+            <p>
+                <a href="https://t.me/yourtelegram" target="_blank">Telegram</a> |
+                <a href="https://instagram.com/yourcafe" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Анимации при прокрутке -->
+    <script>
+        const animated = document.querySelectorAll('.animate');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        animated.forEach(section => observer.observe(section));
+    </script>
+
+    <!-- Заглушка Google Analytics -->
+    <script>
+        console.log("Google Analytics инициализирован (заглушка)");
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
